@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SwiftRide — Modern Bus Booking</title>
+    <meta
+      name="description"
+      content="Book premium bus journeys with SwiftRide. Search routes, compare times, and travel confidently."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar" id="navbar">
+      <div class="container nav-wrap" id="navWrap">
+        <a class="logo" href="#" aria-label="SwiftRide home">SwiftRide</a>
+
+        <nav class="nav" id="navMenu" aria-label="Main navigation">
+          <a href="#">Home</a>
+          <a href="#">Routes</a>
+          <a href="#">Offers</a>
+          <a href="#">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn btn-ghost" type="button">Login</button>
+          <button class="btn btn-solid" type="button">Sign Up</button>
+        </div>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-expanded="false"
+          aria-controls="navMenu"
+          aria-label="Open menu"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="gradient-layer" aria-hidden="true"></div>
+        <div class="highway-overlay" aria-hidden="true"></div>
+        <canvas class="particle-canvas" id="particleCanvas" aria-hidden="true"></canvas>
+        <div class="glow-orb orb-a" aria-hidden="true"></div>
+        <div class="glow-orb orb-b" aria-hidden="true"></div>
+        <div class="glow-orb orb-c" aria-hidden="true"></div>
+
+        <div class="container hero-inner">
+          <p class="eyebrow">Premium travel tech</p>
+          <h1>Find Your Perfect Bus Journey in Seconds</h1>
+          <p class="lead">
+            Smart route discovery, real-time availability, and effortless booking — all in one
+            premium experience.
+          </p>
+
+          <form class="search-card" id="searchForm">
+            <div class="field">
+              <label for="fromCity">From</label>
+              <input id="fromCity" name="from" type="text" placeholder="Enter departure city" value="New York" />
+            </div>
+
+            <button class="swap" id="swapBtn" type="button" aria-label="Swap departure and destination">
+              <span>⇄</span>
+            </button>
+
+            <div class="field">
+              <label for="toCity">To</label>
+              <input id="toCity" name="to" type="text" placeholder="Enter destination city" value="Boston" />
+            </div>
+
+            <div class="field">
+              <label for="travelDate">Date</label>
+              <div class="date-wrap">
+                <span aria-hidden="true">📅</span>
+                <input id="travelDate" name="date" type="date" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Passengers</label>
+              <div class="counter" role="group" aria-label="Passenger count">
+                <button id="minusBtn" type="button" aria-label="Decrease passengers">−</button>
+                <span id="passengerCount" aria-live="polite">1</span>
+                <button id="plusBtn" type="button" aria-label="Increase passengers">+</button>
+              </div>
+            </div>
+
+            <button class="search-btn" type="submit">Search Buses</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="stats" id="stats">
+        <div class="container stats-grid">
+          <article class="stat-card">
+            <p class="stat-value"><span class="counter-number" data-target="10">0</span>M+</p>
+            <p class="stat-label">Passengers</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-value"><span class="counter-number" data-target="500">0</span>+</p>
+            <p class="stat-label">Routes</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-value"><span class="counter-number" data-target="99">0</span>%</p>
+            <p class="stat-label">On-Time</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-value"><span class="counter-number" data-target="24">0</span>/7</p>
+            <p class="stat-label">Support</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
